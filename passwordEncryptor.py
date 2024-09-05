@@ -7,4 +7,5 @@ fernet = Fernet(key)
 
 encryptMessage = fernet.encrypt(bytes(inputMessage, encoding="utf8"))
 
+print("Here is your encrypted password")
 print(encryptMessage)
