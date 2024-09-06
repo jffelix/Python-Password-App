@@ -1,17 +1,16 @@
 from cryptography.fernet import Fernet
 from passwordEncryptor import passwordEncrypt, loadKey
 
-# encryptedPassword = passwordEncrypt()
-
 def passwordDecrypt():
 
     try:
-        loadingSavedKey = loadKey()
         encryptedPassword = input("Type in your encrypted password: ")
+
+        loadingSavedKey = loadKey()
         fernet = Fernet(loadingSavedKey)
         decryptedPassword = fernet.decrypt(encryptedPassword).decode()
-        print("decryptedPassword: ", decryptedPassword)
 
+        print("decryptedPassword: ", decryptedPassword)
         return decryptedPassword
     
     except:

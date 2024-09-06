@@ -61,5 +61,3 @@ def passwordEncrypt():
 
     print("We have generated a new encrypted password: ", encryptMessage)
     return encryptMessage
-
-# print(passwordEncrypt())
