@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 from pathlib import Path
-import os
+# import os
 
 # os.listdir()
 currentPath = Path(__file__).parent / "keyfile.key"
@@ -15,22 +15,34 @@ def generateKey():
     return key
 
 def loadKey():
-    # return open("password.key", "rb").read()
-    return open(currentPath, "rb").read()
-    # print("loadKey test")
+    try:
+        loadedKey = open(currentPath, "rb").read()
+        print(loadedKey)
+        return loadedKey
+    except:
+        print("Error received while loading key")
 
 # print(loadKey())
 
-# def passwordEncrypt():
-#     inputPassword = input("Input your message here: ")
+def passwordEncrypt():
+    inputPassword = input("Input your message here: ")
 
-#     # goal is to load pass key from saved file here
-#     loadKey = generateKey()
+    # goal is to load pass key from saved file here
+    try:
+        loadedPassKey = loadKey()
+        print("sucessful key load")
+        print("Here is the loaded pass key: ", loadedPassKey)
+        return loadedPassKey
+    except:
+        newKey = generateKey()
+        print("Generating new key: ", newKey)
 
-#     # convert string to bytes
-#     encryptMessage = loadKey.encrypt(bytes(inputPassword, encoding="utf8"))
+        fernet = Fernet(newKey)
+
+        # convert string to bytes
+        encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
     
-#     print("Here is your encrypted password: ")
-#     return encryptMessage
+        print("Here is your new encrypted password: ")
+        return encryptMessage
 
-# print(passwordEncrypt())
+print(passwordEncrypt())
