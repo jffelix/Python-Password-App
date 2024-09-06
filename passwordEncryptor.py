@@ -27,7 +27,7 @@ def passwordEncrypt():
     inputPassword = input("Input your message here: ")
 
     newKey = generateKey()
-    print("Generated new key and saved to file: ", newKey)
+    print("Generated new key and saved to file")
 
     fernet = Fernet(newKey)
 
