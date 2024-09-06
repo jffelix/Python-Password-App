@@ -34,5 +34,5 @@ def passwordEncrypt():
     # convert string to bytes
     encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
 
-    print("We have generated a new encrypted password: ", encryptMessage)
+    print("Please save this encrypted password for reference: ", encryptMessage)
     return encryptMessage
