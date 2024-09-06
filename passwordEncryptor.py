@@ -1,5 +1,5 @@
 from cryptography.fernet import Fernet
-from pathlib import Path
+# from pathlib import Path
 
 # currentPath = Path(__file__).absolute()
 # print(currentPath)
@@ -8,17 +8,16 @@ def generateKey():
     key = Fernet.generate_key()
     fernet = Fernet(key)
 
-    # with open("password.key", "wb") as passwordKey_file:
-    #     passwordKey_file.write(key)
+    # with open("password.key", "wb") as file:
+    #     file.write(fernet)
     return fernet
 
 # def loadKey():
-#     # return open("password.key", "rb").read()
+#     return open("password.key", "rb").read()
 #     # return open(currentPath).read()
-#     print("loadKey test")
+#     # print("loadKey test")
 
 # print(loadKey())
-
 
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
