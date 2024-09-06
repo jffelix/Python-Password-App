@@ -4,12 +4,10 @@ from pathlib import Path
 
 # os.listdir()
 currentPath = Path(__file__).parent / "keyfile.key"
-# print(currentPath)
 
 def generateKey():
     key = Fernet.generate_key()
 
-    # pass key is not saving to file. Should use a try/except when handling files
     try:
         with open(currentPath, "wb") as file:
             file.write(key)
@@ -24,8 +22,6 @@ def loadKey():
         return loadedKey
     except:
         print("Error received while loading key at loadKey.")
-
-# print(loadKey())
 
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
