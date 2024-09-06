@@ -3,27 +3,32 @@ import string
 
 print("Hello from Password Generator!")
 
-plength = int(input("Enter password length: "))
+def passwordGenerator():
 
-lowercaseLetters = string.ascii_lowercase
-uppercaseLetters = string.ascii_uppercase
-numbers = string.digits
-symbols = string.punctuation
+    plength = int(input("Enter password length: "))
 
-keyboardCommands = []
+    lowercaseLetters = string.ascii_lowercase
+    uppercaseLetters = string.ascii_uppercase
+    numbers = string.digits
+    symbols = string.punctuation
 
-keyboardCommands.extend(list(lowercaseLetters))
-keyboardCommands.extend(list(uppercaseLetters))
-keyboardCommands.extend(list(numbers))
-keyboardCommands.extend(list(symbols))
+    keyboardCommands = []
 
-generatedPassword = ''
+    keyboardCommands.extend(list(lowercaseLetters))
+    keyboardCommands.extend(list(uppercaseLetters))
+    keyboardCommands.extend(list(numbers))
+    keyboardCommands.extend(list(symbols))
 
-while True:
-    randomInput = random.choice(keyboardCommands)
-    generatedPassword += randomInput
-    plength -= 1
-    if plength == 0:
-        break
+    generatedPassword = ''
 
-print("Your new password is: " + generatedPassword)
+    while True:
+        randomInput = random.choice(keyboardCommands)
+        generatedPassword += randomInput
+        plength -= 1
+        if plength == 0:
+            break
+
+    print("Your new password is: " + generatedPassword)
+    return generatedPassword
+
+# print(passwordGenerator())
