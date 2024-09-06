@@ -23,6 +23,8 @@ def generateKey():
 
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
+
+    # goal is to load pass key from saved file here
     loadKey = generateKey()
 
     # convert string to bytes
