@@ -28,5 +28,3 @@ def passwordGenerate():
 
     print("Your new password is: " + generatedPassword)
     return generatedPassword
-
-# print(passwordGenerate())
