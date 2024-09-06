@@ -1,7 +1,7 @@
 from cryptography.fernet import Fernet
 from passwordEncryptor import passwordEncrypt, loadKey
 
-encryptedPassword = passwordEncrypt()
+# encryptedPassword = passwordEncrypt()
 
 def passwordDecrypt():
 
@@ -17,4 +17,4 @@ def passwordDecrypt():
     except:
         print("Error received while loading key at passwordDecryptor")
 
-print(passwordDecrypt())
+# print(passwordDecrypt())
