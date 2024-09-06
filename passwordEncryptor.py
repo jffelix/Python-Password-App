@@ -1,22 +1,32 @@
 from cryptography.fernet import Fernet
+from pathlib import Path
+
+# currentPath = Path(__file__).absolute()
+# print(currentPath)
 
 def generateKey():
     key = Fernet.generate_key()
     fernet = Fernet(key)
+
+    # with open("password.key", "wb") as passwordKey_file:
+    #     passwordKey_file.write(key)
     return fernet
+
+# def loadKey():
+#     # return open("password.key", "rb").read()
+#     # return open(currentPath).read()
+#     print("loadKey test")
+
+# print(loadKey())
 
 
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
-    # key = Fernet.generate_key()
-    # fernet = Fernet(key)
     loadKey = generateKey()
 
     # convert string to bytes
-    # encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
     encryptMessage = loadKey.encrypt(bytes(inputPassword, encoding="utf8"))
     
-
     print("Here is your encrypted password: ")
     return encryptMessage
 
