@@ -12,4 +12,4 @@ elif (userChoice.lower() == "encryptor"):
 elif (userChoice.lower() == "decryptor"):
     print('You chose Decryptor!')
 else:
-    print("Error, choose again.")
+    print("Your input does not match the choices. Choose again.")
