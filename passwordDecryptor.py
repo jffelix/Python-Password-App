@@ -10,7 +10,7 @@ def passwordDecrypt():
         fernet = Fernet(loadingSavedKey)
         decryptedPassword = fernet.decrypt(encryptedPassword).decode()
 
-        print("decryptedPassword: ", decryptedPassword)
+        print("Your decrypted password: ", decryptedPassword)
         return decryptedPassword
     
     except:
