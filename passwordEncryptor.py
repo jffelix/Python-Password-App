@@ -30,29 +30,8 @@ def loadKey():
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
 
-    # # load pass key from saved file here
-    # try:
-    #     loadedPassKey = loadKey()
-    #     print("sucessful key load")
-    #     print("Here is the loaded pass key: ", loadedPassKey)
-    #     return inputPassword
-
-    # # need to generate new key if not found
-    # except:
-    #     print("Error received while loading key at passwordEncrypt")
-    #     newKey = generateKey()
-    #     print("Generating new key: ", newKey)
-
-    #     fernet = Fernet(newKey)
-
-    #     # convert string to bytes
-    #     encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
-    
-    #     print("We have generated a new encrypted password: ")
-    #     return encryptMessage
-
     newKey = generateKey()
-    print("Generating new key: ", newKey)
+    print("Generated new key and saved to file: ", newKey)
 
     fernet = Fernet(newKey)
 
