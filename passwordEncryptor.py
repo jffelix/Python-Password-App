@@ -20,7 +20,7 @@ def loadKey():
         print(loadedKey)
         return loadedKey
     except:
-        print("Error received while loading key")
+        print("Error received while loading key at loadKey")
 
 # print(loadKey())
 
@@ -32,7 +32,8 @@ def passwordEncrypt():
         loadedPassKey = loadKey()
         print("sucessful key load")
         print("Here is the loaded pass key: ", loadedPassKey)
-        return loadedPassKey
+        return inputPassword
+
     # need to generate new key if not found
     except:
         print("Error received while loading key at passwordEncrypt")
