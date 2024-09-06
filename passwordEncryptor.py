@@ -10,9 +10,12 @@ def generateKey():
     key = Fernet.generate_key()
 
     # pass key is not saving to file. Should use a try/except when handling files
-    with open(currentPath, "wb") as file:
-        file.write(key)
-    return key
+    try:
+        with open(currentPath, "wb") as file:
+            file.write(key)
+        return key
+    except:
+        print("Error received while generating key.")
 
 def loadKey():
     try:
@@ -20,7 +23,7 @@ def loadKey():
         print(loadedKey)
         return loadedKey
     except:
-        print("Error received while loading key at loadKey")
+        print("Error received while loading key at loadKey.")
 
 # print(loadKey())
 
