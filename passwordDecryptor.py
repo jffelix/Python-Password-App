@@ -3,8 +3,10 @@ from passwordEncryptor import passwordEncrypt
 
 encryptedPassword = passwordEncrypt()
 
-def passwordDecryptor():
+# def passwordDecryptor():
 
-    print(encryptedPassword)
+#     fernet = Fernet(key)
+#     decryptedPassword = fernet.decrypt(encryptedPassword)
+#     return decryptedPassword
 
-print(passwordDecryptor())
+# print(passwordDecryptor())
