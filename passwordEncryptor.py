@@ -8,6 +8,8 @@ def generateKey():
     key = Fernet.generate_key()
     fernet = Fernet(key)
 
+    # pass key is not saving to file
+
     # with open("password.key", "wb") as file:
     #     file.write(fernet)
     return fernet
