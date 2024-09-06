@@ -1,5 +1,5 @@
 from cryptography.fernet import Fernet
-from passwordEncryptor import passwordEncrypt, loadKey
+from passwordEncryptor import loadKey
 
 def passwordDecrypt():
 
