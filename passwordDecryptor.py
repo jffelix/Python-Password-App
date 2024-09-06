@@ -5,7 +5,8 @@ encryptedPassword = passwordEncrypt()
 
 # def passwordDecryptor():
 
-#     fernet = Fernet(key)
+#     # will need to load saved pass key from passwordEncryptor file here
+
 #     decryptedPassword = fernet.decrypt(encryptedPassword)
 #     return decryptedPassword
 
