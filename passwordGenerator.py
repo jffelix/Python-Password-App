@@ -1,9 +1,7 @@
 import random
 import string
 
-print("Hello from Password Generator!")
-
-def passwordGenerator():
+def passwordGenerate():
 
     plength = int(input("Enter password length: "))
 
@@ -31,4 +29,4 @@ def passwordGenerator():
     print("Your new password is: " + generatedPassword)
     return generatedPassword
 
-# print(passwordGenerator())
+# print(passwordGenerate())
