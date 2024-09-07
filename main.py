@@ -7,13 +7,13 @@ print("Welcome to Python Password App!\n")
 userChoice = input("Choose from the following: Generator, Encryptor, Decryptor ")
 
 if (userChoice.lower() == "generator"):
-    print("Hello from Password Generator!\n")
+    print("Welcome to Password Generator!\n")
     passwordGenerate()
 elif (userChoice.lower() == "encryptor"):
-    print("Hello from Password Encryptor!\n")
+    print("Welcome to Password Encryptor!\n")
     passwordEncrypt()
 elif (userChoice.lower() == "decryptor"):
-    print("Hello from Password Decryptor!\n")
+    print("Welcome to Password Decryptor!\n")
     passwordDecrypt()
 else:
     print("Your input does not match the choices. Choose again.")
