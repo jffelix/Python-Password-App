@@ -10,10 +10,10 @@ if (userChoice.lower() == "generator"):
     print("Hello from Password Generator!")
     passwordGenerate()
 elif (userChoice.lower() == "encryptor"):
-    print("Hello from passwordEncrypt!")
+    print("Hello from Password Encryptor!")
     passwordEncrypt()
 elif (userChoice.lower() == "decryptor"):
-    print("Hello from passwordDecrypt!")
+    print("Hello from Password Decryptor!")
     passwordDecrypt()
 else:
     print("Your input does not match the choices. Choose again.")
