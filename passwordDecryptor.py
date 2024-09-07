@@ -2,7 +2,6 @@ from cryptography.fernet import Fernet
 from passwordEncryptor import loadKey
 
 def passwordDecrypt():
-
     try:
         encryptedPassword = input("Type in your encrypted password: ")
 

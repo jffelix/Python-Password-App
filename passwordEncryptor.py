@@ -24,15 +24,18 @@ def loadKey():
 
 # accepts input for encryption
 def passwordEncrypt():
-    inputPassword = input("Input your message here: ")
+    try:
+        inputPassword = input("Input your message here: ")
 
-    newKey = generateKey()
-    print("Generated new key and saved to file")
+        newKey = generateKey()
+        print("Generated new key and saved to file")
 
-    fernet = Fernet(newKey)
+        fernet = Fernet(newKey)
 
-    # convert string to bytes
-    encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
+        # convert string to bytes
+        encryptMessage = fernet.encrypt(bytes(inputPassword, encoding="utf8"))
 
-    print("Please save this encrypted password for reference: ", encryptMessage)
-    return encryptMessage
+        print("Please save this encrypted password for reference: ", encryptMessage)
+        return encryptMessage
+    except:
+        print("Error received while encrypting password.")
