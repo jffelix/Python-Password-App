@@ -2,18 +2,18 @@ from passwordGenerator import passwordGenerate
 from passwordEncryptor import passwordEncrypt
 from passwordDecryptor import passwordDecrypt
 
-print("Welcome to Python Password App! \n")
+print("Welcome to Python Password App!\n")
 
 userChoice = input("Choose from the following: Generator, Encryptor, Decryptor ")
 
 if (userChoice.lower() == "generator"):
-    print("Hello from Password Generator!")
+    print("Hello from Password Generator!\n")
     passwordGenerate()
 elif (userChoice.lower() == "encryptor"):
-    print("Hello from Password Encryptor!")
+    print("Hello from Password Encryptor!\n")
     passwordEncrypt()
 elif (userChoice.lower() == "decryptor"):
-    print("Hello from Password Decryptor!")
+    print("Hello from Password Decryptor!\n")
     passwordDecrypt()
 else:
     print("Your input does not match the choices. Choose again.")
