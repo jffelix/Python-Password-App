@@ -1,10 +1,9 @@
 from cryptography.fernet import Fernet
 from pathlib import Path
-# import os
 
-# os.listdir()
 currentPath = Path(__file__).parent / "keyfile.key"
 
+# generates and saves pass key to file
 def generateKey():
     key = Fernet.generate_key()
 
@@ -15,6 +14,7 @@ def generateKey():
     except:
         print("Error received while generating key.")
 
+# loads saved pass key
 def loadKey():
     try:
         loadedKey = open(currentPath, "rb").read()
@@ -22,6 +22,7 @@ def loadKey():
     except:
         print("Error received while loading key at loadKey.")
 
+# accepts input for encryption
 def passwordEncrypt():
     inputPassword = input("Input your message here: ")
 
