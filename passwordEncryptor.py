@@ -18,7 +18,6 @@ def generateKey():
 def loadKey():
     try:
         loadedKey = open(currentPath, "rb").read()
-        # print(loadedKey)
         return loadedKey
     except:
         print("Error received while loading key at loadKey.")
