@@ -2,7 +2,7 @@ from passwordGenerator import passwordGenerate
 from passwordEncryptor import passwordEncrypt
 from passwordDecryptor import passwordDecrypt
 
-print("Welcome to Python Password App!")
+print("Welcome to Python Password App! \n")
 
 userChoice = input("Choose from the following: Generator, Encryptor, Decryptor ")
 
