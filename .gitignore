@@ -1,6 +1,5 @@
-.keyfile.key/
+keyfile.key
 .keyfile.key
-keyfile.key/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
